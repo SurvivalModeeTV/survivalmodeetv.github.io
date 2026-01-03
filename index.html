@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>SurvivalModeTV - Home</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
   <style>
-    /* Grundlayout */
+    /* -------------------- Grundlayout -------------------- */
     * {
       margin: 0;
       padding: 0;
@@ -16,9 +20,12 @@
       background-color: #000;
       color: #fff;
       overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    /* Navbar */
+    /* -------------------- Navbar -------------------- */
     nav {
       width: 100%;
       padding: 10px 30px;
@@ -32,13 +39,11 @@
       z-index: 1000;
     }
 
-    /* Logo */
     .logo {
       height: 80px;
       width: auto;
     }
 
-    /* Navbar Links */
     .nav-links {
       display: flex;
       gap: 25px;
@@ -55,18 +60,18 @@
       color: #ff3e00;
     }
 
-    /* Main Content */
+    /* -------------------- Main Content -------------------- */
     main {
-      height: 100vh;
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 0 20px;
+      margin-top: 100px; /* Platz für Navbar */
     }
 
-    /* Typewriter Effekt */
     .typewriter {
       overflow: hidden;
       border-right: .15em solid white;
@@ -84,12 +89,11 @@
       50% { border-color: transparent; }
     }
 
-    /* Fade-in Untertext */
     .subtext {
       color: #aaa;
       margin-top: 15px;
       opacity: 0;
-      animation: fadeIn 2s forwards 3s; /* Verzögerung 3s */
+      animation: fadeIn 2s forwards 3s;
       font-size: 18px;
     }
 
@@ -97,52 +101,64 @@
       to { opacity: 1; }
     }
 
-    /* Responsive */
+    /* -------------------- Footer -------------------- */
+    footer {
+      background: rgba(0,0,0,0.7);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #ff3e00;
+    }
+
+    /* -------------------- Responsive -------------------- */
     @media (max-width: 600px) {
-      .typewriter {
-        font-size: 20px;
-      }
-      .subtext {
-        font-size: 14px;
-      }
-      .nav-links a {
-        font-size: 14px;
-        gap: 15px;
-      }
-      .logo {
-        height: 30px;
-      }
+      .typewriter { font-size: 20px; }
+      .subtext { font-size: 14px; }
+      .nav-links { gap: 15px; font-size: 14px; }
+      footer { font-size: 14px; gap: 15px; }
+      .logo { height: 50px; }
     }
   </style>
-  
-  <link rel="icon" type="image/png" href="logo.png">
-
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav>
-  <!-- Logo links -->
-  <img src="logo.png" alt="Logo" class="logo">
+  <!-- Navbar -->
+  <nav>
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">Cloud</a>
+      <a href="#contact">Mail</a>
+    </div>
+  </nav>
 
-  <!-- Links rechts -->
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">Cloud</a>
-    <a href="#contact">Mail</a>
-  </div>
-</nav>
+  <!-- Main Content -->
+  <main id="home">
+    <div class="typewriter">Morgen ^^</div>
+    <div class="subtext">Willkommen auf meiner Homepage.</div>
+  </main>
 
-<!-- Main Content -->
-<main id="home">
-  <div class="typewriter">Morgen ^^</div>
-  <div class="subtext">Willkommen auf meiner Homepage.</div>
-</main>
-  
-<footer><a href="https://github.com/deinusername" target="_blank" class="social">GitHub</a>
-  <a href="https://twitter.com/deinusername" target="_blank" class="social">YouTube</a>
-  <a href="https://linkedin.com/in/deinusername" target="_blank" class="social">Twitch</a></footer>
-  
+  <!-- Footer -->
+  <footer>
+    <a href="https://github.com/deinusername" target="_blank">GitHub</a>
+    <a href="https://youtube.com/deinusername" target="_blank">YouTube</a>
+    <a href="https://twitch.tv/deinusername" target="_blank">Twitch</a>
+  </footer>
+
 </body>
 </html>
 
