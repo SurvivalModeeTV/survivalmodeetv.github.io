@@ -21,9 +21,10 @@
     /* Navbar */
     nav {
       width: 100%;
-      padding: 15px 30px;
+      padding: 10px 30px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
       position: fixed;
       top: 0;
       left: 0;
@@ -31,15 +32,26 @@
       z-index: 1000;
     }
 
-    nav a {
+    /* Logo */
+    .logo {
+      height: 40px;
+      width: auto;
+    }
+
+    /* Navbar Links */
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
       color: #fff;
       text-decoration: none;
-      margin-left: 25px;
       font-size: 16px;
       transition: color 0.3s;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #ff3e00;
     }
 
@@ -56,8 +68,8 @@
 
     /* Typewriter Effekt */
     .typewriter {
-      overflow: hidden; /* Ensures text is hidden at start */
-      border-right: .15em solid white; /* cursor */
+      overflow: hidden;
+      border-right: .15em solid white;
       white-space: nowrap;
       animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
       font-size: 28px;
@@ -93,9 +105,12 @@
       .subtext {
         font-size: 14px;
       }
-      nav a {
-        margin-left: 15px;
+      .nav-links a {
         font-size: 14px;
+        gap: 15px;
+      }
+      .logo {
+        height: 30px;
       }
     }
   </style>
@@ -104,9 +119,15 @@
 
 <!-- Navbar -->
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">Über mich</a>
-  <a href="#contact">Kontakt</a>
+  <!-- Logo links -->
+  <img src="logo.png" alt="Logo" class="logo">
+
+  <!-- Links rechts -->
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">Über mich</a>
+    <a href="#contact">Kontakt</a>
+  </div>
 </nav>
 
 <!-- Main Content -->
@@ -117,3 +138,4 @@
 
 </body>
 </html>
+
