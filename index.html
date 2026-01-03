@@ -1,5 +1,119 @@
-hi
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Minimalistische Homepage</title>
+  <style>
+    /* Grundlayout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-Root: www.survivalmodetv.de
-Mail: mail.survivalmodetv.de
+    /* Navbar */
+    nav {
+      width: 100%;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.7); /* halbtransparent */
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3e00;
+    }
+
+    /* Main Content */
+    main {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* Typewriter Effekt */
+    .typewriter {
+      overflow: hidden; /* Ensures text is hidden at start */
+      border-right: .15em solid white; /* cursor */
+      white-space: nowrap;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      font-size: 28px;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* Fade-in Untertext */
+    .subtext {
+      color: #aaa;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeIn 2s forwards 3s; /* Verzögerung 3s */
+      font-size: 18px;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .typewriter {
+        font-size: 20px;
+      }
+      .subtext {
+        font-size: 14px;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">Über mich</a>
+  <a href="#contact">Kontakt</a>
+</nav>
+
+<!-- Main Content -->
+<main id="home">
+  <div class="typewriter">Hallo Welt</div>
+  <div class="subtext">Willkommen auf meiner minimalistischen Homepage</div>
+</main>
+
+</body>
+</html>
